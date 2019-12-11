@@ -20,7 +20,7 @@ public class SpritesVisibilitySwitcher : MonoBehaviour
 	public Text m_Title_Packed_sRGB_ON;
 	public Text m_Title_Single_sRGB_OFF;
 	public Text m_Title_Packed_sRGB_OFF;
-	
+
 	public GameObject m_Sprite_Single_sRGB_ON;
 	public GameObject m_Sprite_Packed_sRGB_ON;
 	public GameObject m_Sprite_Single_sRGB_OFF;
@@ -41,22 +41,21 @@ public class SpritesVisibilitySwitcher : MonoBehaviour
 		{
 			UpdateVisibility(CurVisible.Single_sRGB_ON);
 		}
-		
+
 		if (Input.GetKeyDown(KeyCode.Alpha2) == true || Input.GetKeyDown(KeyCode.Keypad2) == true)
 		{
 			UpdateVisibility(CurVisible.Packed_sRGB_ON);
 		}
-		
+
 		if (Input.GetKeyDown(KeyCode.Alpha3) == true || Input.GetKeyDown(KeyCode.Keypad3) == true)
 		{
 			UpdateVisibility(CurVisible.Single_sRGB_OFF);
 		}
-		
+
 		if (Input.GetKeyDown(KeyCode.Alpha4) == true || Input.GetKeyDown(KeyCode.Keypad4) == true)
 		{
 			UpdateVisibility(CurVisible.Packed_sRGB_OFF);
-		}		
-		
+		}
 	}
 
 
@@ -66,12 +65,12 @@ public class SpritesVisibilitySwitcher : MonoBehaviour
 		m_Title_Packed_sRGB_ON.color = ColorInactive;
 		m_Title_Single_sRGB_OFF.color = ColorInactive;
 		m_Title_Packed_sRGB_OFF.color = ColorInactive;
-		
+
 		m_Sprite_Single_sRGB_ON.SetActive(false);
 		m_Sprite_Packed_sRGB_ON.SetActive(false);
 		m_Sprite_Single_sRGB_OFF.SetActive(false);
 		m_Sprite_Packed_sRGB_OFF.SetActive(false);
-		
+
 		switch (a_CurVisible)
 		{
 			case CurVisible.Single_sRGB_ON:
@@ -88,7 +87,7 @@ public class SpritesVisibilitySwitcher : MonoBehaviour
 				m_Sprite_Single_sRGB_OFF.SetActive(true);
 				m_Title_Single_sRGB_OFF.color = ColorActive;
 				break;
-			
+
 			case CurVisible.Packed_sRGB_OFF:
 				m_Sprite_Packed_sRGB_OFF.SetActive(true);
 				m_Title_Packed_sRGB_OFF.color = ColorActive;
